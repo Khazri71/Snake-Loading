@@ -1,0 +1,89 @@
+/*Variables*/
+:root {
+  --main-background-color: #ccc;
+  --main-color-one: #f2c12e;
+  --main-color-two: #008f8c;
+}
+/*All*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Body*/
+body {
+  background-color: var(--main-background-color);
+}
+main .snake-loading {
+  width: 300px;
+  max-height: 200px;
+  margin: 300px auto 100px;
+  position: relative;
+}
+main .snake-loading span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-color-one);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 60px;
+  border-radius: 50%;
+  -webkit-animation: snake-move 0.8s ease-in-out infinite alternate;
+  animation: snake-move 0.8s ease-in-out infinite alternate;
+}
+main .snake-loading span:first-child {
+  left: 20px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+main .snake-loading span:nth-child(2) {
+  left: 50px;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+main .snake-loading span:nth-child(3) {
+  left: 80px;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+main .snake-loading span:nth-child(4) {
+  left: 110px;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+main .snake-loading span:last-child {
+  left: 140px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+/*Animation*/
+@-webkit-keyframes snake-move {
+  from {
+    top: 0;
+    background-color: var(--main-color-two);
+    opacity: 1;
+  }
+  to {
+    top: 30px;
+    background-color: var(--main-color-one);
+    opacity: 0.6;
+  }
+}
+@keyframes snake-move {
+  from {
+    top: 0;
+    background-color: var(--main-color-two);
+    opacity: 1;
+  }
+  to {
+    top: 30px;
+    background-color: var(--main-color-one);
+    opacity: 0.6;
+  }
+}
