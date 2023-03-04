@@ -1,6 +1,0 @@
---NOTES--
---> Animation Fill-mode : None : Default value - Forawards - Backaward - Both 
-
-
-
---ROADMAP--
